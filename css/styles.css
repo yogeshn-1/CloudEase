@@ -5,6 +5,7 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
+/* Typography */
 
 html {
   /* 62.5 % of 16 px(default) = 10px (makes calculation easier when defining font size in rem for other elements) */
@@ -51,5 +52,32 @@ p {
 
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin-left 0.15s;
+}
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
