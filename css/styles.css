@@ -135,3 +135,24 @@ a {
   padding-right: 0.5rem;
   margin-bottom: 1rem;
 }
+
+/* Icons */
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon-container {
+  background: #c0c3de;
+  height: 64px;
+  width: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
