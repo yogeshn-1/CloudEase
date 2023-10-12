@@ -1,9 +1,17 @@
 :root {
+  --border-color: #bbb;
+  --border-radius: 25px;
   --color-accent: #ff3400;
   --color-body: #918ca4;
   --color-headings: #1b0760;
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 /* Typography */
 
@@ -213,6 +221,44 @@ a {
 
 @media screen and (min-width: 1024px) {
   .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* input */
+
+.input {
+  border-radius: var(--border-radius);
+  border: 1.5px solid var(--border-color);
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 2.5rem;
+}
+
+::placeholder {
+  color: #b5bdc8;
+}
+
+.input-group {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  display: flex;
+  margin-top: 1rem;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1rem 1rem;
+}
+
+.input-group .btn {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
     font-size: 1.5rem;
   }
 }
