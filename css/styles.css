@@ -283,3 +283,60 @@ a {
   background: var(--color-secondary);
   color: #fff;
 }
+
+/* Plans */
+
+.plan {
+  width: 25%;
+  padding: 2rem;
+  transition: transform 0.2s;
+}
+
+.plan__name {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.plan__price {
+  font-size: 6rem;
+  font-weight: 300;
+}
+
+.plan__billing-cycle {
+  margin-right: 1rem;
+  opacity: 0.8;
+}
+
+.plan__description {
+  display: block;
+  font-weight: 300;
+  word-spacing: 1px;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(/Images/popular.svg);
+  display: inline-block;
+  width: 40px;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+.plan:hover {
+  transform: scale(1.1);
+}
+
+.plan--container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
