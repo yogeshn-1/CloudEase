@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extra</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+  <body>
+    <div class="block block--dark hero">
+      <nav class="navbar collapsible">
+        <a href="/"><img src="Images/logo.png" alt="Logo of the webpage" /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use xlink:href="Images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="#">Hosting</a></li>
+          <li class="nav__item"><a href="#">VPS</a></li>
+          <li class="nav__item"><a href="#">Pricing</a></li>
+        </ul>
+      </nav>
+      <div class="grid grid--1x2">
+        <header class="hero__content">
+          <h2 class="hero__heading">Cloud Hosting for Pros</h2>
+          <p class="hero__tagline">Deploy your websites in less than 60sec.</p>
+          <button class="btn btn--accent link-arrow">Get Started</button>
+        </header>
+        <img src="Images/banner.png" alt="" class="hero__img" />
+      </div>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
+</html>
