@@ -23,7 +23,6 @@ body {
   color: var(--color-body);
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 1.8rem;
-  line-height: 1.5; /* 1.5 of current font */
 }
 
 h1,
@@ -32,10 +31,11 @@ h3,
 h4 {
   color: var(--color-headings);
   margin-bottom: 1.5rem;
+  line-height: 1.1;
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -177,16 +177,16 @@ a {
 /* Buttons */
 
 .btn {
+  border-radius: 40px;
   border: 0;
-  border-radius: 20px;
-  padding: 1rem 2rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  text-transform: uppercase;
   cursor: pointer;
-  white-space: nowrap;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 4vw;
   text-align: center;
-  margin: 1rem;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .btn .icon {
@@ -234,6 +234,11 @@ a {
   color: #fff;
 }
 
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -265,6 +270,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
+  width: 0;
   padding: 1rem 2rem;
 }
 
@@ -344,13 +350,13 @@ a {
 .plan--popular .card__header::before {
   content: url(/Images/popular.svg);
   display: inline-block;
-  width: 40px;
+  width: 35px;
   position: absolute;
   top: -6px;
   right: 5%;
 }
 .plan:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .plan--popular:hover {
   transform: scale(1.15);
@@ -475,13 +481,17 @@ a {
 /* Callout */
 
 .callout {
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: 7px;
+  padding: 4rem;
 }
 
 .callout--primary {
   background-color: var(--color-primary);
   color: #fff;
+}
+
+.callout--signup {
+  transform: translateY(5rem);
 }
 
 .callout__content {
@@ -494,6 +504,7 @@ a {
 
 .callout__content > h2 {
   margin-top: 1rem;
+  color: #fff;
 }
 
 @media screen and (min-width: 768px) {
@@ -543,12 +554,14 @@ a {
 /* Blocks */
 
 .block {
-  --padding-vertical: 6rem;
+  --padding-vertical: 4rem;
   padding: var(--padding-vertical) 2rem;
+  border-collapse: collapse;
 }
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
@@ -568,12 +581,12 @@ a {
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 /* Navigation bar/panel */
@@ -614,6 +627,10 @@ a {
   border-radius: 5px;
 }
 
+.nav__brand {
+  transform: translateY(5px);
+  width: 150px;
+}
 @media screen and (min-width: 768px) {
   .nav__toggler {
     display: none;
@@ -631,14 +648,6 @@ a {
 }
 
 /* Hero */
-.hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-  padding: 2rem 0;
-}
-.hero__content {
-  text-align: center;
-  align-self: center;
-}
 
 .hero__heading {
   line-height: 1.1;
@@ -646,7 +655,9 @@ a {
 }
 
 .hero__tagline {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
 }
 
 .hero__img {
@@ -656,7 +667,7 @@ a {
 @media screen and (min-width: 768px) {
   .hero__content {
     text-align: left;
-    padding: 0 4rem;
+    align-self: center;
   }
 }
 
@@ -674,8 +685,9 @@ a {
 }
 
 .block--domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   justify-items: center;
   font-size: 2rem;
@@ -714,10 +726,6 @@ a {
 
 /* Showcase */
 
-.block-showcase {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
-
 .block-showcase__image {
   width: 100%;
 }
@@ -737,11 +745,12 @@ a {
 
 .footer {
   background-color: #232323;
+  padding-top: 10rem;
 }
 
 .footer__section {
   border-bottom: solid 1px #393939;
-  padding-top: 1rem;
+  padding: 2rem;
 }
 
 .footer a {
@@ -756,7 +765,7 @@ a {
 .footer__heading {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .footer__brand {
@@ -776,6 +785,9 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
   .footer .grid {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
@@ -793,6 +805,6 @@ a {
     order: -1;
   }
   .footer__heading {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
