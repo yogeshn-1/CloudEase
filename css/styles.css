@@ -99,7 +99,6 @@ a {
   font-weight: 600;
   padding: 0.5rem 2rem;
   white-space: nowrap; /* text will not go on 2nd line  */
-  /* margin-top: 2px; */
 }
 
 .badge--primary {
@@ -703,6 +702,10 @@ a {
   font-weight: 600;
   cursor: pointer;
   margin: 0 auto;
+}
+
+.block--domain__prices .badge {
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 768px) {
